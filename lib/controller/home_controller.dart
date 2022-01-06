@@ -50,7 +50,6 @@ class HomeController extends GetxController{
   ].obs;
 
   var pages = [
-    // AppsPage(),
     HomePage(),
     AppsPage(),
     GamesPage(),
