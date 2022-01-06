@@ -8,7 +8,7 @@ import '../view/movie_view.dart';
 
 class HomeController extends GetxController{
 
-  var selectedIndex = 0.obs;
+  var selectedIndex = 1.obs;
   var small = true.obs;
 
   var icons = [
