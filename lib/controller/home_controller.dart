@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../view/apps_view.dart';
 import '../view/games_view.dart';
+import '../view/home_view.dart';
 import '../view/movie_view.dart';
 
 class HomeController extends GetxController{
@@ -50,8 +51,8 @@ class HomeController extends GetxController{
 
   var pages = [
     // AppsPage(),
-    MoviePage(),
-    MoviePage(),
+    HomePage(),
+    AppsPage(),
     GamesPage(),
     MoviePage(),
   ].obs;

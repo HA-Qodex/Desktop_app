@@ -9,27 +9,8 @@ class AppsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final height = MediaQuery
-    //     .of(context)
-    //     .size
-    //     .height;
-    // final width = MediaQuery
-    //     .of(context)
-    //     .size
-    //     .width;
-    return GetX<HomeController>(
-      builder: (controller) {
-        return GestureDetector(
-          onTap: (){
-            controller.small != controller.small;
-          },
-          child: AnimatedContainer(duration: const Duration(milliseconds: 2000),
-            height: controller.small.value ? 200 : 400,
-            width: controller.small.value ? 200 : 400,
-            color: Colors.yellow,
-          ),
-        );
-      },
+    return Container(
+      child: Center(child: Text("Apps")),
     );
   }
 }
