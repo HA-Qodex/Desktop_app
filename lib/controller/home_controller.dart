@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,6 +8,8 @@ import '../view/home_view.dart';
 import '../view/movie_view.dart';
 
 class HomeController extends GetxController{
+
+  final caroselController = CarouselController();
 
   var selectedIndex = 0.obs;
   var currentIndex = 0.obs;
@@ -66,6 +69,16 @@ class HomeController extends GetxController{
     "assets/banner/banner_5.jpeg",
     "assets/banner/banner_6.jpg",
     "assets/banner/banner_7.png"
+  ].obs;
+
+  var bannerTitle = [
+    "The Witcher",
+    "Minecraft",
+    "Among Us",
+    "Halo INFINITE",
+    "Angry Bird",
+    "Asphalt 9",
+    "Watch Dogs LEGION"
   ].obs;
 
   List<Tile> map<Tile>(List list, Function function) {
