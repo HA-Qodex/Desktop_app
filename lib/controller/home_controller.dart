@@ -8,7 +8,9 @@ import '../view/movie_view.dart';
 
 class HomeController extends GetxController{
 
-  var selectedIndex = 1.obs;
+  var selectedIndex = 0.obs;
+  var currentIndex = 0.obs;
+  var secondarySelectedIndex = 0.obs;
   var small = true.obs;
 
   var icons = [
@@ -55,4 +57,22 @@ class HomeController extends GetxController{
     GamesPage(),
     MoviePage(),
   ].obs;
+
+  var slideImageList = [
+    "assets/banner/banner_1.jpg",
+    "assets/banner/banner_2.jpg",
+    "assets/banner/banner_3.png",
+    "assets/banner/banner_4.jpg",
+    "assets/banner/banner_5.jpeg",
+    "assets/banner/banner_6.jpg",
+    "assets/banner/banner_7.png"
+  ].obs;
+
+  List<Tile> map<Tile>(List list, Function function) {
+    List<Tile> result = [];
+    for (var i = 0; i < list.length; i++) {
+      result.add(function(i, list[i]));
+    }
+    return result;
+  }
 }
