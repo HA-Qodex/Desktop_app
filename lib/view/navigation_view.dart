@@ -181,6 +181,7 @@ class NavigationPage extends StatelessWidget {
                             children: const [
                               Icon(
                                 Icons.local_mall_outlined,
+                                color: Colors.black54,
                                 size: 30,
                               ),
                               Text(
@@ -199,6 +200,7 @@ class NavigationPage extends StatelessWidget {
                               Icon(
                                 Icons.help_outline,
                                 size: 30,
+                                color: Colors.black54,
                               ),
                               Text(
                                 "Help",

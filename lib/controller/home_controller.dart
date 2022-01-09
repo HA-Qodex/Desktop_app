@@ -7,8 +7,7 @@ import '../view/games_view.dart';
 import '../view/home_view.dart';
 import '../view/movie_view.dart';
 
-class HomeController extends GetxController{
-
+class HomeController extends GetxController {
   final caroselController = CarouselController();
 
   var selectedIndex = 0.obs;
@@ -20,37 +19,53 @@ class HomeController extends GetxController{
     const Icon(
       Icons.home_outlined,
       size: 30,
+      color: Colors.black54,
     ),
     const Icon(
       Icons.app_registration_outlined,
       size: 30,
+      color: Colors.black54,
     ),
     const Icon(
       Icons.sports_esports_outlined,
       size: 30,
+      color: Colors.black54,
     ),
     const Icon(
       Icons.live_tv_outlined,
       size: 30,
+      color: Colors.black54,
     ),
   ].obs;
 
   var title = [
     const Text(
       "Home",
-      style: TextStyle(fontSize: 10),
+      style: TextStyle(
+        fontSize: 10,
+        color: Colors.black54,
+      ),
     ),
     const Text(
       "Apps",
-      style: TextStyle(fontSize: 10),
+      style: TextStyle(
+        fontSize: 10,
+        color: Colors.black54,
+      ),
     ),
     const Text(
       "Games",
-      style: TextStyle(fontSize: 10),
+      style: TextStyle(
+        fontSize: 10,
+        color: Colors.black54,
+      ),
     ),
     const Text(
       "Movies & TV",
-      style: TextStyle(fontSize: 10),
+      style: TextStyle(
+        fontSize: 10,
+        color: Colors.black54,
+      ),
     ),
   ].obs;
 
@@ -88,4 +103,35 @@ class HomeController extends GetxController{
     }
     return result;
   }
+
+  var topFreeAppsImage = [
+    "assets/product/itune.png",
+    "assets/product/xbox.png",
+    "assets/product/disnep.png",
+    "assets/product/tiktok.png",
+    "assets/product/icloud.png",
+    "assets/product/netflix.png"
+  ];
+
+  var topFreeAppsName = [
+    "iTune",
+    "Xbox",
+    "disnep",
+    "tiktok",
+    "icloud",
+    "netflix"
+  ];
+
+  var topFreeAppsCategory = [
+    "Music",
+    "Entertainment",
+    "Entertainment",
+    "Entertainment",
+    "Productivity",
+    "Entertainment",
+  ];
+
+  var topFreeAppsRatings = [
+    3,4,2,5,3,4
+  ];
 }

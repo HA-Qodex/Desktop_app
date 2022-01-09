@@ -2,7 +2,15 @@
 class Assets {
   Assets._();
 
-  static const String assetsProfile = 'assets/profile.png';
-  static const String assetsStore = 'assets/store.png';
+  static const String assetsProfile = 'D:/Test File/Desktop_app/assets/profile.png';
+  static const String assetsStore = 'D:/Test File/Desktop_app/assets/store.png';
+  static const String bannerBanner1 = 'D:/Test File/Desktop_app/assets/banner/banner_1.jpg';
+  static const String bannerBanner2 = 'D:/Test File/Desktop_app/assets/banner/banner_2.jpg';
+  static const String bannerBanner3 = 'D:/Test File/Desktop_app/assets/banner/banner_3.png';
+  static const String bannerBanner4 = 'D:/Test File/Desktop_app/assets/banner/banner_4.jpg';
+  static const String bannerBanner5 = 'D:/Test File/Desktop_app/assets/banner/banner_5.jpeg';
+  static const String bannerBanner6 = 'D:/Test File/Desktop_app/assets/banner/banner_6.jpg';
+  static const String bannerBanner7 = 'D:/Test File/Desktop_app/assets/banner/banner_7.png';
+  static const String svgHome = 'D:/Test File/Desktop_app/assets/svg/home.svg';
 
 }
