@@ -140,8 +140,8 @@ class HomePage extends StatelessWidget {
                 height: 300,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Align(
+                  children: [
+                    const Align(
                         alignment: Alignment.topLeft,
                         child: Text(
                           "Top free apps",
@@ -151,69 +151,71 @@ class HomePage extends StatelessWidget {
                               fontWeight: FontWeight.w600),
                           textAlign: TextAlign.left,
                         )),
-                        // ListView.builder(
-                        //   shrinkWrap: true,
-                        //   scrollDirection: Axis.horizontal,
-                        //   itemCount: homeController.topFreeAppsName.length,
-                        //   itemBuilder: (context, index) {
-                        //     return Card(
-                        //       elevation: 3,
-                        //       shape: RoundedRectangleBorder(
-                        //           borderRadius: BorderRadius.circular(10)),
-                        //       child: Container(
-                        //         width: 150,
-                        //         height: 250,
-                        //         padding: const EdgeInsets.all(15.0),
-                        //         decoration: BoxDecoration(
-                        //             borderRadius: BorderRadius.circular(10),
-                        //             color: AppColors.backgroundColor),
-                        //         child: Column(
-                        //           crossAxisAlignment: CrossAxisAlignment.start,
-                        //           children: [
-                        //             Center(
-                        //                 child: Image.asset(
-                        //                   homeController.topFreeAppsImage[index],
-                        //                   height: 100,
-                        //                   width: 100,
-                        //                 )),
-                        //             const SizedBox(height: 20,),
-                        //             Text(
-                        //               homeController.topFreeAppsName[index],
-                        //               style: const TextStyle(
-                        //                   color: Colors.black,
-                        //                   fontWeight: FontWeight.w600),
-                        //               textAlign: TextAlign.left,
-                        //             ),
-                        //             const SizedBox(height: 5,),
-                        //             Text(
-                        //               homeController.topFreeAppsCategory[index],
-                        //               style: const TextStyle(color: Colors.grey, fontSize: 12),
-                        //               textAlign: TextAlign.left,
-                        //             ),
-                        //             const SizedBox(height: 5,),
-                        //             RatingBarIndicator(
-                        //               itemCount: 5,
-                        //               itemSize: 15.0,
-                        //               unratedColor: Colors.grey,
-                        //               rating: 3,
-                        //               itemBuilder: (BuildContext context, int index) {
-                        //                 return const Icon(Icons.star, size: 12, color: Colors.black,);
-                        //               },),
-                        //             const Spacer(),
-                        //             const Text(
-                        //               "Free",
-                        //               style: TextStyle(
-                        //                   color: Colors.black),
-                        //               textAlign: TextAlign.left,
-                        //             ),
-                        //             const SizedBox(width:10),
-                        //           ],
-                        //         ),
-                        //       ),
-                        //     );
-                        //   }
-                        // ),
-                    SizedBox(
+                    Expanded(
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                            scrollDirection: Axis.horizontal,
+                            itemCount: homeController.topFreeAppsName.length,
+                            itemBuilder: (context, index) {
+                              return Card(
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Container(
+                                  width: 150,
+                                  height: 250,
+                                  padding: const EdgeInsets.all(15.0),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: AppColors.backgroundColor),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Center(
+                                          child: Image.asset(
+                                            homeController.topFreeAppsImage[index],
+                                            height: 100,
+                                            width: 100,
+                                          )),
+                                      const SizedBox(height: 20,),
+                                      Text(
+                                        homeController.topFreeAppsName[index],
+                                        style: const TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w600),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                      const SizedBox(height: 5,),
+                                      Text(
+                                        homeController.topFreeAppsCategory[index],
+                                        style: const TextStyle(color: Colors.grey, fontSize: 12),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                      const SizedBox(height: 5,),
+                                      RatingBarIndicator(
+                                        itemCount: 5,
+                                        itemSize: 15.0,
+                                        unratedColor: Colors.grey,
+                                        rating: 3,
+                                        itemBuilder: (BuildContext context, int index) {
+                                          return const Icon(Icons.star, size: 12, color: Colors.black,);
+                                        },),
+                                      const Spacer(),
+                                      const Text(
+                                        "Free",
+                                        style: TextStyle(
+                                            color: Colors.black),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                      const SizedBox(width:10),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            }
+                          ),
+                    ),
+                    const SizedBox(
                       height: 10,
                     )
                   ],

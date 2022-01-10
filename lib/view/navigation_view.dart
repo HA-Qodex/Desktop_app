@@ -2,12 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:windows_app/controller/home_controller.dart';
+import 'package:windows_app/controller/navigation_controller.dart';
 import 'package:windows_app/resources/colors.dart';
 
 class NavigationPage extends StatelessWidget {
   NavigationPage({Key? key}) : super(key: key);
 
-  final homeController = Get.put(HomeController());
+  final navigationController = Get.put(NavigationController());
 
   @override
   Widget build(BuildContext context) {
@@ -108,18 +109,18 @@ class NavigationPage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: ListView.builder(
-                          itemCount: homeController.pages.length,
+                          itemCount: navigationController.pages.length,
                           itemBuilder: (context, index) {
                             return GestureDetector(
                               onTap: () {
-                                homeController.selectedIndex.value = index;
+                                navigationController.selectedIndex.value = index;
                               },
                               child:
                                   GetX<HomeController>(builder: (controller) {
                                 return Container(
                                   height: 50,
                                   decoration: BoxDecoration(
-                                    color: homeController.selectedIndex.value ==
+                                    color: navigationController.selectedIndex.value ==
                                         index
                                         ? Colors.blue.withOpacity(0.1)
                                         : AppColors.secondBackgroundColor,
@@ -130,7 +131,7 @@ class NavigationPage extends StatelessWidget {
                                       GetX<HomeController>(
                                         builder: (controller) {
                                           return Visibility(
-                                            visible: homeController
+                                            visible: navigationController
                                                         .selectedIndex.value ==
                                                     index
                                                 ? true
@@ -150,15 +151,15 @@ class NavigationPage extends StatelessWidget {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
                                             children: [
-                                              homeController.icons[index],
+                                              navigationController.icons[index],
                                               Visibility(
-                                                  visible: homeController
+                                                  visible: navigationController
                                                               .selectedIndex
                                                               .value ==
                                                           index
                                                       ? false
                                                       : true,
-                                                  child: homeController
+                                                  child: navigationController
                                                       .title[index]),
                                             ],
                                           );
@@ -215,7 +216,7 @@ class NavigationPage extends StatelessWidget {
                 ),
               );
             }),
-            Expanded(child: GetX<HomeController>(
+            Expanded(child: GetX<NavigationController>(
               builder: (controller) {
                 return controller.pages[controller.selectedIndex.value];
               },
